@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -18,17 +19,22 @@
 
     <style>
         :root{
-            --bg:#07060a;
+            /* 更换为深蓝/暮色渐变风格，避免纯黑 */
+            --bg-top: #021428;      /* 顶部色 */
+            --bg-bottom: #07213a;   /* 底部色 */
             --glass: rgba(255,255,255,0.04);
             --text:#e6eef8;
-            --muted: rgba(230,238,248,0.7);
+            --muted: rgba(230,238,248,0.75);
             --accent-a: #7cf7ff;
             --accent-b: #8a6cff;
             --card: rgba(255,255,255,0.03);
             --glass-border: rgba(255,255,255,0.06);
         }
         *{box-sizing:border-box}
-        html,body{height:100%; margin:0; padding:0; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background:linear-gradient(180deg,var(--bg) 0%, #0d0912 100%); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+        html,body{height:100%; margin:0; padding:0; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            /* 使用两色渐变，整体更有层次，不再全黑 */
+            background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+            color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
         .wrap{min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:40px 20px;}
         header{width:100%; max-width:1100px; display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:30px;}
         .brand{display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text)}
@@ -54,7 +60,7 @@
             display:flex; gap:28px; align-items:center; justify-content:space-between; padding:28px; border-radius:14px;
             background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
             border:1px solid var(--glass-border);
-            box-shadow: 0 12px 40px rgba(8,8,12,0.6);
+            box-shadow: 0 12px 40px rgba(6,12,20,0.6);
         }
         .hero-left{flex:1; min-width:260px;}
         .hero-left h2{margin:0; font-size:34px; line-height:1.05; color:var(--text)}
@@ -173,7 +179,7 @@ print(resp.json())</code></pre>
                 <div class="grid">
                     <div class="card">
                         <h4>为何选择 gpt5-api？</h4>
-                        <p>集中接入 GPT-5 与主流模型，免翻墙、API 路由智能调度、支持自定义限流与企业计费，帮助开发者降低集成门槛与维护成本。</p>
+                        <p>集中接入 GPT-5 与主流模型，免、API 路由智能调度、支持自定义限流与企业计费，帮助开发者降低集成门槛与维护成本。</p>
                         <ul style="margin-top:12px; padding-left:18px; color:var(--muted); font-size:14px;">
                             <li>国内节点 + 智能路由，稳定低延迟</li>
                             <li>多模型统一管理（多模态、嵌入、聊天、补全）</li>
@@ -222,7 +228,7 @@ print(resp.json())</code></pre>
                     <table>
                         <thead><tr><th>对比项</th><th>直连官方</th><th>gpt5-api 中转</th></tr></thead>
                         <tbody>
-                            <tr><td>国内访问</td><td>通常需翻墙</td><td>✅ 国内直连</td></tr>
+                            <tr><td>国内访问</td><td>通常需</td><td>✅ 国内直连</td></tr>
                             <tr><td>延迟</td><td>200-600ms</td><td>✅ 优化 50-120ms</td></tr>
                             <tr><td>多模型一体化</td><td>需分别配置</td><td>✅ 一站式管理</td></tr>
                             <tr><td>企业支持</td><td>有限</td><td>✅ SLA 与专属客服</td></tr>
